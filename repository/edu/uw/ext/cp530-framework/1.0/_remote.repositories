@@ -1,7 +1,0 @@
-#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Fri Jan 01 18:21:38 PST 2021
-cp530-framework-1.0.jar>=
-cp530-framework-1.0.pom>=
-cp530-framework-1.0-tests.jar>=
-cp530-framework-1.0-javadoc.jar>=
-cp530-framework-1.0-test-sources.jar>=
