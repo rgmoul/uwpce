@@ -17,7 +17,7 @@
     <repository>
       <id>cp520-repository</id>
       <name>Repository for CP520</name>
-      <url>https://faculty.washington.edu/rmoul/repository</url>
+	  <url>https://raw.githubusercontent.com/rgmoul/uwpce/main/repository</url>
     </repository>
   </repositories>
 

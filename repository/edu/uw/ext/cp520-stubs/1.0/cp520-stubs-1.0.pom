@@ -6,14 +6,19 @@
     <groupId>edu.uw.ext</groupId>
     <artifactId>cp520-deps</artifactId>
     <version>1.0</version>
-	<!--
-    <relativePath>../cp520-deps.pom</relativePath>
-	-->
     <relativePath/>
   </parent>
   
   <artifactId>cp520-stubs</artifactId>
   <version>1.0</version>
+
+  <repositories>
+    <repository>
+      <id>cp520-repository</id>
+      <name>Repository for CP520</name>
+	  <url>https://raw.githubusercontent.com/rgmoul/uwpce/main/repository</url>
+    </repository>
+  </repositories>
 
   <dependencies>
     <dependency>
