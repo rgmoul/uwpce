@@ -7,10 +7,6 @@
   <packaging>pom</packaging>
   <version>1.0</version>
 
-  <prerequisites>
-    <maven>2.0.6</maven>
-  </prerequisites>
-
   <properties>
     <student>cp520-deps</student>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -99,13 +95,29 @@
           <artifactId>maven-assembly-plugin</artifactId> 
           <version>3.4.2</version>
           <configuration>
-            <finalName>${student}-${project.version}</finalName>
+            <finalName>${student}-${project.artifactId}</finalName>
             <descriptors>
               <descriptor>${project.basedir}/src/assembly/uw-assembly.xml</descriptor>
             </descriptors>
             <tarLongFileMode>posix</tarLongFileMode>
           </configuration>
         </plugin>
+
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.1.0</version>
+          <executions>
+            <execution>
+              <id>exec-app</id>
+              <goals>
+                <goal>java</goal>
+              </goals>
+            </execution>
+        </executions>
+	  
+      </plugin>
+		
 
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
