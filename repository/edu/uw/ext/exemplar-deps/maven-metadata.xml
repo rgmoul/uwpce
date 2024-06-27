@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>edu.uw.pce.advjava</groupId>
-  <artifactId>support</artifactId>
+  <groupId>edu.uw.ext</groupId>
+  <artifactId>exemplar-deps</artifactId>
   <versioning>
     <release>1.0</release>
     <versions>
       <version>1.0</version>
     </versions>
-    <lastUpdated>20240627182908</lastUpdated>
+    <lastUpdated>20240627175705</lastUpdated>
   </versioning>
 </metadata>
