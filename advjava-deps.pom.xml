@@ -15,7 +15,7 @@
   <repositories>
     <repository>
       <id>cp530-repository</id>
-      <name>Repository for CP540</name>
+      <name>Repository for CP510</name>
 	  <url>https://raw.githubusercontent.com/rgmoul/uwpce/main/repository</url>
     </repository>
   </repositories>
