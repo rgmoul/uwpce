@@ -15,7 +15,7 @@
   <repositories>
     <repository>
       <id>cp530-repository</id>
-      <name>Repository for CP510</name>
+      <name>Repository for CP540</name>
 	  <url>https://raw.githubusercontent.com/rgmoul/uwpce/main/repository</url>
     </repository>
   </repositories>
@@ -62,6 +62,13 @@
         <artifactId>hibernate-core</artifactId>
         <version>6.5.0.Final</version>
       </dependency>
+	  <!--
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>6.5.0.Final</version>
+      </dependency>
+	  -->
 	  
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
@@ -246,5 +253,12 @@
     </plugins>
 
   </build>
+
+  <distributionManagement>
+    <repository>
+        <id>uwpce-local-repo</id>
+        <url>file:///Users/russ/udub/uwpce/repository</url>
+    </repository>
+  </distributionManagement> 
 
 </project>
