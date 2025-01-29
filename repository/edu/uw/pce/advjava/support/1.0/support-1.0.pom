@@ -103,6 +103,7 @@
         <artifactId>maven-jar-plugin</artifactId>
         <executions>
           <execution>
+		  <id>test-jar</id>
             <goals>
               <goal>test-jar</goal>
             </goals>
@@ -116,6 +117,12 @@
         <executions>
           <execution>
             <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>attach-test-sources</id>
             <goals>
               <goal>test-jar</goal>
             </goals>
@@ -139,5 +146,11 @@
     </plugins>
   </build>
 
-  
+ <distributionManagement>
+    <repository>
+        <id>uwpce-repo</id>
+        <url>file:///Users/russ/udub/uwpce/repository</url>
+    </repository>
+ </distributionManagement> 
+
   </project>
