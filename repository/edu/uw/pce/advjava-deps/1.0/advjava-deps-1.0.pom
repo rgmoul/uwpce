@@ -180,7 +180,7 @@
                     <useDefaultExcludes>true</useDefaultExcludes>
                   </fileSet>
                   <fileSet>
-                    <directory>${project.basedir}/src</directory>
+                    <directory>src</directory>
                     <useDefaultExcludes>true</useDefaultExcludes>
                     <excludes>
                       <exclude>**/.*</exclude>
