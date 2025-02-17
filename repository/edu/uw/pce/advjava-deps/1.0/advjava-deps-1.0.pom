@@ -16,7 +16,7 @@
     <repository>
       <id>cp530-repository</id>
       <name>Repository for CP540</name>
-	  <url>https://raw.githubusercontent.com/rgmoul/uwpce/main/repository</url>
+      <url>https://raw.githubusercontent.com/rgmoul/uwpce/main/repository</url>
     </repository>
   </repositories>
 
@@ -27,7 +27,7 @@
         <artifactId>slf4j-api</artifactId>
         <version>2.0.12</version>
       </dependency>
-	  
+
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-jdk14</artifactId>
@@ -40,7 +40,7 @@
         <artifactId>spring-context</artifactId>
         <version>6.1.5</version>
       </dependency>
-	  
+
       <dependency>
         <groupId>org.apache.derby</groupId>
         <artifactId>derby</artifactId>
@@ -57,31 +57,24 @@
         <version>10.17.1.0</version>
       </dependency>
 
-	  <dependency>
+      <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>
         <version>6.5.0.Final</version>
       </dependency>
-	  <!--
-      <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-entitymanager</artifactId>
-        <version>6.5.0.Final</version>
-      </dependency>
-	  -->
-	  
+
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
         <version>2.17.0</version>
       </dependency>
 
-	<dependency>
-      <groupId>jakarta.servlet</groupId>
-      <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.1.0-M2</version>
-      <scope>provided</scope>
-    </dependency>
+      <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>6.1.0-M2</version>
+        <scope>provided</scope>
+      </dependency>
 
       <dependency>
         <groupId>org.junit.jupiter</groupId>
@@ -109,8 +102,8 @@
   <build>
     <pluginManagement>
       <plugins>
-	    <plugin>
-		  <artifactId>maven-enforcer-plugin</artifactId>
+        <plugin>
+          <artifactId>maven-enforcer-plugin</artifactId>
           <version>1.4.1</version>
           <executions>
             <execution>
@@ -130,7 +123,7 @@
         </plugin>
 
         <plugin>
-		  <artifactId>maven-compiler-plugin</artifactId>
+          <artifactId>maven-compiler-plugin</artifactId>
           <version>3.10.1</version>
           <configuration>
             <release>21</release>
@@ -140,12 +133,12 @@
             <showWarnings/>
             <compilerArgs>
               <arg>-Xlint:unchecked</arg>
-			  <arg>-Xlint:deprecation</arg>
+              <arg>-Xlint:deprecation</arg>
             </compilerArgs>
           </configuration>
         </plugin>
 
-	    <plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.3.2</version>
@@ -159,14 +152,27 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M7</version>
+          <configuration>
+            <argLine>${env.JAVA_OPTS}</argLine>
+          </configuration>
         </plugin>
+
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.1.0</version>
+          <configuration>
+            <jvmArgs>${env.JAVA_OPTS}</jvmArgs>
+          </configuration>
+        </plugin>
+        
 
         <plugin>
           <artifactId>maven-assembly-plugin</artifactId> 
           <version>3.7.1</version>
           <configuration>
             <finalName>${student}-${project.artifactId}</finalName>
-			<inlineDescriptors>
+            <inlineDescriptors>
               <inlineDescriptor>
                 <id>project</id>
                 <formats>
@@ -231,13 +237,13 @@
     </pluginManagement>
 
     <plugins>
-	  <plugin>
-		<artifactId>maven-enforcer-plugin</artifactId>
+      <plugin>
+        <artifactId>maven-enforcer-plugin</artifactId>
         <executions>
           <execution>
             <id>enforce-maven</id>
             <phase>test</phase>
-			  <goals>
+              <goals>
               <goal>enforce</goal>
             </goals>
             <configuration>
