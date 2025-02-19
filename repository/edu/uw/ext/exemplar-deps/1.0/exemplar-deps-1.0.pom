@@ -140,9 +140,9 @@
 		  <artifactId>maven-compiler-plugin</artifactId>
           <version>3.10.1</version>
           <configuration>
-            <release>21</release>
-            <source>21</source>
-            <target>21</target>
+            <release>19</release>
+            <source>19</source>
+            <target>19</target>
             <showDeprecation/>
             <showWarnings/>
             <compilerArgs>
@@ -176,7 +176,7 @@
                     <useDefaultExcludes>true</useDefaultExcludes>
                   </fileSet>
                   <fileSet>
-                    <directory>${project.basedir}/src</directory>
+                    <directory>src</directory>
                     <useDefaultExcludes>true</useDefaultExcludes>
                     <excludes>
                       <exclude>**/.*</exclude>
@@ -267,5 +267,12 @@
     </plugins>
 
   </build>
+
+  <distributionManagement>
+    <repository>
+        <id>uwpce-local-repo</id>
+        <url>file:///Users/russ/udub/uwpce/repository</url>
+    </repository>
+  </distributionManagement> 
 
 </project>
