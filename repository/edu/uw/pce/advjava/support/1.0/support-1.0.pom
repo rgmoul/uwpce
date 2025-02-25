@@ -146,11 +146,11 @@
     </plugins>
   </build>
 
- <distributionManagement>
+  <distributionManagement>
     <repository>
-        <id>uwpce-repo</id>
+        <id>uwpce-local-repo</id>
         <url>file:///Users/russ/udub/uwpce/repository</url>
     </repository>
- </distributionManagement> 
+  </distributionManagement> 
 
-  </project>
+</project>
