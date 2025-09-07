@@ -1,5 +1,7 @@
 app
 edu.uw.pce.advjava.db
+edu.uw.pce.advjava.net
+edu.uw.pce.advjava.net.protocol
 edu.uw.pce.advjava.services
 edu.uw.pce.advjava.sighting
 edu.uw.pce.advjava.support.account
